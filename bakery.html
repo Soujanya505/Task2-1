@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Task 2</title>
+        <link rel="stylesheet" type="text/css" href="style1.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script >
+            $(function(){
+                var $cats = $('a').click(function(){
+                    if (this.id == "all"){
+                    $('#Container > div').show();
+                } else{
+                    var $fil = $('.' + this.id).show();
+                    $('#Container > div').not($fil).hide();
+        }
+    })
+
+});
+        </script>
+        
+    </head>
+
+    <body style="background-color: rgb(228, 212, 228);">
+        <div class="heading">
+            All Mart Store
+        </div>
+        <div class="search">
+                <input id="myInput" type="text" placeholder="Search here.." onkeyup="searchfunc()" >  
+        </div>
+
+        <div class="categories-box" >
+            
+            <a id="all" href="#"> All </a>
+            <a id="sweets" href="#"> Sweets </a>
+            <a id="cakes" href="#"> Cakes </a>
+            <a id="cupcakes" href="#"> Cupcakes </a>
+            <a id="doughnuts" href="#"> Doughnuts </a>
+
+        </div>
+        
+        <div class=container id="Container">
+         
+            <div class="image-box cakes" > <img src="cake1.jpg">
+                <div class="cat-text">
+                    Cakes
+                </div> <br>
+                 <div class="price">Rs.80 </div> 
+            </div>
+
+            <div class="image-box sweets"> <img src="sweet.jpg"> 
+               <div class="cat-text"> 
+                   Sweets 
+                </div> <br>
+                <div class="price">Rs.120 </div>
+            </div>
+            
+            <div class="image-box cupcakes"> <img src="cupcake1.jpg">
+                <div class="cat-text">  
+                    Cupcakes  
+                </div> <br>
+                <div class="price">Rs.100 </div>
+            </div>
+
+            <div class="image-box doughnuts"> <img src="doughnut.jpg"> 
+                <div class="cat-text">   
+                    Doughnuts  
+                </div> <br>
+                <div class="price">Rs.120 </div>
+            </div>
+            
+            <div class="image-box cupcakes"> <img src="cupcake2.jpg">
+                <div class="cat-text">    
+                    Cupcakes  
+                </div> <br>
+                <div class="price">Rs.140 </div>
+            </div>
+
+            <div class="image-box cakes" > <img src="cake2.jpg"> 
+                <div class="cat-text">   
+                    Cakes  
+                </div> <br>
+                <div class="price">Rs.100 </div>
+            </div>
+            
+        </div>
+        
+    <script src="scrip.js"></script>
+
+    </body>
+</html>
